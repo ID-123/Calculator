@@ -4,6 +4,7 @@ while keep:
 
 
 # Menú inicio
+
     def startup():
         print('''
               --- Bienvenido ---
@@ -18,6 +19,7 @@ while keep:
     opcion = input('Ingrese una opcion: ')
 
 # Menú Figuras 2D
+
     if opcion == '1':
         def twd():
             print(
@@ -31,6 +33,7 @@ while keep:
               ''')
 
 # Menú Figuras 3D
+
     elif opcion == '2':
         def trd():
             print(
@@ -39,29 +42,30 @@ while keep:
                     2.
                     3.
                     4.
-                    5.
-                    6.
+                    5. Volver
+                    6. Salir
               ''')
 
 # Menú Triángulo Rectángulo 
+
     elif opcion == '3':
         def tr():
             print(
                 '''Seleccione una opcion:
-                    1.
-                    2.
-                    3.
-                    4.
-                    5.
-                    6.
+                    1. Hipotenusa 
+                    2. Área 
+                    3. Volver
+                    4. Salir
               ''')
 
 # Cerrar
+
     elif opcion == '4':
         print('adios')
         keep = False
 
 # Opción inválida 
+
     else:
         print('Opcion invalida, por favor intente de nuevo.')
         continue
