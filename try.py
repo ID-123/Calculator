@@ -155,15 +155,14 @@ while keep:
     # Menu Trapecio
         elif opcion_twd == '3':
             
-            def circle():
+            def trpc():
                 print('''
                     --- Seleccione una opcion:
                         
                         1. Área
-                        2. Perímetro 
-                        3. Diámetro
-                        4. Volver
-                        5. Salir
+                        2. Perímetro  
+                        3. Volver
+                        4. Salir
                 ''')
             
             circle()
@@ -185,19 +184,11 @@ while keep:
                 p_cir = 2 * pi * r 
                 
                 print('El perímetro del círculo es: ', round(p_cir, 3))
-            
+
             elif cir == '3':
-
-                r = float(input('Ingrese el radio (en número): '))
-                
-                d_cir = 2 * r
-
-                print('El diámetro del círculo es: ', round(d_cir, 3))
-
-            elif cir == '4':
                 continue 
 
-            elif cir == '5':
+            elif cir == '4':
                 print('Adiós.')
                 keep = False
         
