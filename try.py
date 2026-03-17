@@ -139,7 +139,7 @@ while keep:
                 
                 ang_tri = 180 - (ang_a + ang_b)
 
-                print('El ángulo restante es igual a: ', round(ang_tri, 3))
+                print('El ángulo restante equivale a: ', round(ang_tri, 3))
 
             elif trg == '4':
                 continue 
