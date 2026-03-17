@@ -48,7 +48,7 @@ at_cono = pi * r * (r + g_cono) # area total del cono
 
 # prisma de n lados
 v_prisma = Ab * h # volumen del prisma
-al_prisma = pb_p * h # area lateral del prisma
+al_prisma = pb * h # area lateral del prisma
 at_prisma = 2 * Ab + al_prisma # area total del prisma
 
 # triangulo rectangulo

@@ -1,8 +1,8 @@
-keep = True
+keep = 1
 pi = 3.14159
 
 
-while keep:
+while keep == 1:
 
 
 # Menú inicio
@@ -60,6 +60,7 @@ while keep:
 
             cir = input('Ingrese una opción: ')
 
+        # Radio circulo
             if cir == '1':
                 
                 r = float(input('Ingrese el radio (en número): '))
@@ -67,7 +68,8 @@ while keep:
                 a_cir = pi * r**2
 
                 print('El área del círculo es: ', round(a_cir, 3))
-            
+
+        # Perimetro circulo    
             elif cir == '2':
                 
                 r = float(input('Ingrese el radio (en número): '))
@@ -76,6 +78,7 @@ while keep:
                 
                 print('El perímetro del círculo es: ', round(p_cir, 3))
             
+        # Diametro circulo
             elif cir == '3':
 
                 r = float(input('Ingrese el radio (en número): '))
@@ -89,7 +92,7 @@ while keep:
 
             elif cir == '5':
                 print('Adiós.')
-                keep = False
+                keep = 0
         
             else:
                 print('Opcion invalida, por favor intente de nuevo.')
@@ -113,6 +116,7 @@ while keep:
 
             trg = input('Ingrese una opción: ')
 
+        # Area triangulo
             if trg == '1':
                 
                 b = float(input('Ingrese valor de la base (en número): '))
@@ -121,7 +125,8 @@ while keep:
                 a_tri = (b * h) / 2
 
                 print('El área del triángulo es: ', round(a_tri, 3))
-            
+        
+        # Perimetro triangulo
             elif trg == '2':
                 
                 a = float(input('Ingrese el valor del primer lado (en número): '))
@@ -131,7 +136,8 @@ while keep:
                 p_tri = a + b + c
                 
                 print('El perímetro del triángulo es: ', round(p_tri, 3))
-            
+        
+        # Angulo triangulo
             elif trg == '3':
 
                 ang_a = float(input('Ingrese el valor del primer ángulo (en número): '))
@@ -146,7 +152,7 @@ while keep:
 
             elif trg == '5':
                 print('Adiós.')
-                keep = False
+                keep = 0
         
             else:
                 print('Opcion invalida, por favor intente de nuevo.')
@@ -165,32 +171,39 @@ while keep:
                         4. Salir
                 ''')
             
-            circle()
+            trpc()
 
-            cir = input('Ingrese una opción: ')
+            trap = input('Ingrese una opción: ')
 
-            if cir == '1':
+        # Area trapecio
+            if trap == '1':
                 
-                r = float(input('Ingrese el radio (en número): '))
+                bm = float(input('Ingrese el valor de la base mayor (en número): '))
+                b = float(input('Ingrese el valor de la base menor (en número): '))
+                h = float(input('Ingrese el valor de la altura (en número): '))
 
-                a_cir = pi * r**2
+                a_trap = ((bm + b) * h) / 2
 
-                print('El área del círculo es: ', round(a_cir, 3))
+                print('El área del trapecio es: ', round(a_trap, 3))
             
-            elif cir == '2':
+        # Perimetro trapecio 
+            elif trap == '2':
                 
-                r = float(input('Ingrese el radio (en número): '))
+                a = float(input('Ingrese el valor del lado 1 (en número): '))
+                b = float(input('Ingrese el valor del lado 2 (en número): '))
+                c = float(input('Ingrese el valor del lado 3 (en número): '))
+                d = float(input('Ingrese el valor del lado 4 (en número): '))
 
-                p_cir = 2 * pi * r 
+                p_trap = a + b + c + d
                 
                 print('El perímetro del círculo es: ', round(p_cir, 3))
 
-            elif cir == '3':
+            elif trap == '3':
                 continue 
 
-            elif cir == '4':
+            elif trap == '4':
                 print('Adiós.')
-                keep = False
+                keep = 0
         
             else:
                 print('Opcion invalida, por favor intente de nuevo.')
@@ -199,51 +212,57 @@ while keep:
     # Menu Rectangulo
         elif opcion_twd == '4':
             
-            def circle():
+            def rctg():
                 print('''
                     --- Seleccione una opcion:
                         
                         1. Área
                         2. Perímetro 
-                        3. Diámetro
+                        3. Diagonal
                         4. Volver
                         5. Salir
                 ''')
             
-            circle()
+            rctg()
 
-            cir = input('Ingrese una opción: ')
+            rect = input('Ingrese una opción: ')
 
-            if cir == '1':
+        # Area rectangulo
+            if rect == '1':
                 
-                r = float(input('Ingrese el radio (en número): '))
+                b = float(input('Ingrese el valor de la base (en número): '))
+                h = float(input('Ingrese el valor de la altura (en número): '))
 
-                a_cir = pi * r**2
+                a_rec = b * h
 
-                print('El área del círculo es: ', round(a_cir, 3))
+                print('El área del rectángulo es: ', round(a_rec, 3))
             
-            elif cir == '2':
+        # Perimetro rectangulo
+            elif rect == '2':
                 
-                r = float(input('Ingrese el radio (en número): '))
+                b = float(input('Ingrese el valor de la base (en número): '))
+                h = float(input('Ingrese el valor de la altura (en número): '))
 
-                p_cir = 2 * pi * r 
+                p_rec = 2 * (b + h)
                 
-                print('El perímetro del círculo es: ', round(p_cir, 3))
-            
-            elif cir == '3':
+                print('El perímetro del rectángulo es: ', round(p_rec, 3))
+        
+        # Diagonal rectangulo
+            elif rect == '3':
 
-                r = float(input('Ingrese el radio (en número): '))
+                b = float(input('Ingrese el valor de la base (en número): '))
+                h = float(input('Ingrese el valor de la altura (en número): '))
                 
-                d_cir = 2 * r
+                d_rec = (b**2 + h**2)**(1/2)
 
-                print('El diámetro del círculo es: ', round(d_cir, 3))
+                print('La diagonal del rectángulo es: ', round(d_rec, 3))
 
-            elif cir == '4':
+            elif rect == '4':
                 continue 
 
-            elif cir == '5':
+            elif rect == '5':
                 print('Adiós.')
-                keep = False
+                keep = 0
         
             else:
                 print('Opcion invalida, por favor intente de nuevo.')
@@ -254,7 +273,7 @@ while keep:
 
         elif opcion_twd == '6':
             print('Adiós.')
-            keep = False
+            keep = 0
     
         else:
             print('Opcion invalida, por favor intente de nuevo.')
@@ -294,18 +313,30 @@ while keep:
             
             opcion_prmd = input('Ingrese una opción: ')
 
+        # Volumen piramide
             if opcion_prmd == '1':
-                print()
-            
+                Ab = float(input('Ingrese el valor del área base (en número): '))
+                h = float(input('Ingrese el valor de la altura (en número): '))
+                
+                v_piramide = (Ab * h) / 3 
+
+                print('El volumen de la pirámide es: ', round(v_piramide, 3))
+        
+        # Area pirámide
             elif opcion_prmd == '2':
-                print()
+                Ab = float(input('Ingrese el valor del área base (en número): '))
+                Al = float(input('Ingrese el valor del área lateral (en número): '))
+                
+                a_piramide = Ab + Al
             
+                print('El aŕea de la piramide es: ', round(a_piramide, 3))
+
             elif opcion_prmd == '3':
-                print()
+                continue
 
             elif opcion_prmd == '4':
                 print('Adiós.')
-                keep = False
+                keep = 0
 
             else:
                 print('Opcion invalida, por favor intente de nuevo.')
@@ -314,30 +345,55 @@ while keep:
     # Menu Cilindro
         elif opcion_trd == '2':
             
-            def prmd():
+            def clndr():
                 print('''
                     --- Seleccione una opcion:
 
                         1. Volumen
-                        2. Área
-                        3. Volver
-                        4. Salir
+                        2. Área lateral
+                        3. Área total
+                        4. Volver
+                        5. Salir
                     ''')
             
-            opcion_prmd = input('Ingrese una opción: ')
+            clndr()
 
-            if opcion_prmd == '1':
-                print()
-            
-            elif opcion_prmd == '2':
-                print()
-            
-            elif opcion_prmd == '3':
-                print()
+            opcion_clndr = input('Ingrese una opción: ')
 
-            elif opcion_prmd == '4':
+        # Volumen cilindro
+            if opcion_clndr == '1':
+                
+                r = float(input('Ingrese el valor del radio (en número): '))
+                h = float(input('Ingrese el valor de la altura (en número): '))
+                
+                v_cilindro = pi * r**2 * h
+
+                print('El volumen del cilindro es: ', round(v_cilindro, 3))
+
+        # Area lateral cilindro
+            elif opcion_clndr == '2':
+                r = float(input('Ingrese el valor del radio (en número): '))
+                h = float(input('Ingrese el valor de la altura (en número): '))
+                
+                al_cilindro = 2 * pi * r * h 
+
+                print('El área lateral del cilindro es: ', round(al_cilindro, 3))
+        
+        # Area total cilindro
+            elif opcion_clndr == '3':
+                r = float(input('Ingrese el valor del radio (en número): '))
+                h = float(input('Ingrese el valor de la altura (en número): '))
+                
+                at_cilindro = 2 * pi * r * (r + h)
+
+                print('El área total del cilindro es: ', round(at_cilindro, 3))
+
+            elif opcion_clndr == '4':
+                continue
+
+            elif opcion_clndr == '5':
                 print('Adiós.')
-                keep = False
+                keep = 0
 
             else:
                 print('Opcion invalida, por favor intente de nuevo.')
@@ -346,30 +402,68 @@ while keep:
     # Menu Cono   
         elif opcion_trd == '3':
 
-            def prmd():
+            def cono():
                 print('''
                     --- Seleccione una opcion:
 
                         1. Volumen
-                        2. Área
-                        3. Volver
-                        4. Salir
+                        2. Generatriz
+                        3. Área lateral
+                        4. Área total
+                        5. Volver
+                        6. Salir
                     ''')
             
-            opcion_prmd = input('Ingrese una opción: ')
+            cono()
 
-            if opcion_prmd == '1':
-                print()
-            
-            elif opcion_prmd == '2':
-                print()
-            
-            elif opcion_prmd == '3':
-                print()
+            opcion_cono = input('Ingrese una opción: ')
 
-            elif opcion_prmd == '4':
+        # Volumen cono
+            if opcion_cono == '1':
+                r = float(input('Ingrese el valor del radio (en número): '))
+                h = float(input('Ingrese el valor de la altura (en número): '))
+                
+                v_cono = (pi * r**2 * h) / 3
+
+                print('El volumen del cono es: ', round(v_cono, 3))
+        
+        # Generatriz cono
+            elif opcion_cono == '2':
+                r = float(input('Ingrese el valor del radio (en número): '))
+                h = float(input('Ingrese el valor de la altura (en número): '))
+
+                g_cono = (r**2 + h**2)**(1/2)
+
+                print('La generatriz del cono es igual a: ', round(g_cono, 3))
+        
+        # Area lateral cono
+            elif opcion_cono == '3':
+                r = float(input('Ingrese el valor del radio (en número): '))
+                h = float(input('Ingrese el valor de la altura (en número): '))
+
+                g_cono = (r**2 + h**2)**(1/2)
+
+                al_cono = pi * r * g_cono 
+                
+                print('El área lateral del cono es igual a: ', round(al_cono, 3))
+        
+        # Area total cono
+            elif opcion_cono == '4':
+                r = float(input('Ingrese el valor del radio (en número): '))
+                h = float(input('Ingrese el valor de la altura (en número): '))
+
+                g_cono = (r**2 + h**2)**(1/2)
+                
+                at_cono = pi * r * (r + g_cono) 
+
+                print('El área total del cono es igual a: ', round(at_cono, 3))
+
+            elif opcion_cono == '5':
+                continue
+
+            elif opcion_cono == '6':
                 print('Adiós.')
-                keep = False
+                keep = 0
 
             else:
                 print('Opcion invalida, por favor intente de nuevo.')
@@ -377,7 +471,7 @@ while keep:
 
     # Menu Prisma
         elif opcion_trd == '4':
-            def prmd():
+            def prsm():
                 print('''
                     --- Seleccione una opcion:
 
@@ -387,18 +481,44 @@ while keep:
                         4. Salir
                     ''')
             
-            opcion_prmd = input('Ingrese una opción: ')
+            prsm()
 
-            if opcion_prmd == '1':
-                print()
-            
-            elif opcion_prmd == '2':
-                print()
-            
-            elif opcion_prmd == '3':
-                print()
+            opcion_prsm = input('Ingrese una opción: ')
 
-            elif opcion_prmd == '4':
+        # Volumen prisma
+            if opcion_prsm == '1':
+                Ab = float(input('Ingrese el valor del área base (en número): '))
+                h = float(input('Ingrese el valor de la altura (en número); '))
+
+                v_prisma = Ab * h 
+
+                print('El volumen del prisma es igual a: ', round(v_prisma, 3))
+        
+        # Area lateral prisma
+            elif opcion_prsm == '2':
+                pb = float(input('Ingrese el valor del perímetro base (en número): '))
+                h = float(input('Ingrese el valor de la altura (en número); '))
+
+                al_prisma = pb * h
+
+                print('El área lateral del prisma es igual a: ', round(al_prisma, 3))
+        
+        #Area total prisma
+            elif opcion_prsm == '3':
+                Ab = float(input('Ingrese el valor del área base (en número): '))
+                pb = float(input('Ingrese el valor del perímetro base (en número): '))
+                h = float(input('Ingrese el valor de la altura (en número); '))
+
+                al_prisma = pb * h
+
+                at_prisma = 2 * Ab + al_prisma
+
+                print('El área total del prisma es igual a: ', round(at_prisma, 3))
+            
+            elif opcion_prsm == '4':
+                continue
+
+            elif opcion_prsm == '5':
                 print('Adiós.')
                 keep = False
 
@@ -412,7 +532,7 @@ while keep:
 
         elif opcion_trd == '6':
             print('Adiós.')
-            keep = False
+            keep = 0
     
         else:
             print('Opcion invalida, por favor intente de nuevo.')
@@ -453,14 +573,14 @@ while keep:
 
             a_tri_rect = (b * h) / 2
 
-            print('El valor de la Hipotenusa es: ', a_tri_rect)
+            print('El valor del área es: ', a_tri_rect)
 
         elif opcion_tr == '3':
             continue
 
         elif opcion_tr == '4':
             print('Adiós.')
-            keep = False
+            keep = 0
         
         else:
             print('Opcion invalida, por favor intente de nuevo.')
@@ -470,7 +590,7 @@ while keep:
 
     elif opcion == '4':
         print('Adiós.')
-        keep = False
+        keep = 0
 
 # Opción inválida 
 
